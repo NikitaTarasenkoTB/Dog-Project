@@ -1,4 +1,4 @@
-# smart-home-project
+# dog-project
 
 ## Project setup
 ```
