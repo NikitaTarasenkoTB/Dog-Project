@@ -34,6 +34,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  z-index: 9;
 }
 .intro__title {
   margin-top: 12.6%;

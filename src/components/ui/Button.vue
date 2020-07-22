@@ -26,5 +26,6 @@
   font-size: 12px;
   line-height: 22px;
   color: white;
+  text-transform: uppercase;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div :class="['card', {cardColumn: cardColumn}]">
+  <div :class="['myCard', {cardColumn: cardColumn}]">
     <img :src="url" :class="['card__image', {card__imageRow: cardRow}, {card__imageColumn: cardColumn}]">
     <div :class="[{crad__container: cardColumn}]">
       <h3 class="card__title">
@@ -19,7 +19,7 @@
 </script>
 
 <style scoped>
-.card {
+.myCard {
   display: flex;
   max-width: 324px;
   color: #4B4B4B;

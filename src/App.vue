@@ -4,6 +4,8 @@
     <WhoWeAre />
     <DogWithBall />
     <OurServices />
+    <MakeAnAppointment />
+    <Streams />
     <router-view />
   </div>
 </template>
@@ -14,6 +16,8 @@ import Intro from '@/components/sections/Intro';
 import WhoWeAre from '@/components/sections/WhoWeAre';
 import DogWithBall from '@/components/sections/DogWithBall';
 import OurServices from '@/components/sections/OurServices';
+import MakeAnAppointment from '@/components/sections/MakeAnAppointment';
+import Streams from '@/components/sections/Streams';
 
 export default {
   name: 'App',
@@ -22,6 +26,8 @@ export default {
     WhoWeAre,
     DogWithBall,
     OurServices,
+    MakeAnAppointment,
+    Streams,
   }
 
 }

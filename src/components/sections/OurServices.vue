@@ -1,19 +1,39 @@
 <template>
-  <div>
-    <Card 
-    :url="cards[0].url"
-    :title="cards[0].title"
-    :text="cards[0].text"
-    :cardColumn="true"
-    />
-  </div>
+<div class="page">
+  <MainPanel class="services" :textPanelActive="true">
+    <Title class="services__title" :fontColor="'#5D62B5'">
+      <template v-slot:title>
+        Our services
+      </template>
+      <template v-slot:subtitle>
+        Sed perspiciatis omnis iste natus
+      </template>
+    </Title>
+    <div class="grid-container">
+      <Card 
+      v-for="card in cards" :key="card.id"
+      :url="card.url"
+      :title="card.title"
+      :text="card.text"
+      :cardColumn="true"
+      />
+    </div>
+    <Button class="services__button">learn more</Button>
+  </MainPanel>
+</div>
 </template>
 
 <script>
 import Card from '@/components/Card';
+import MainPanel from '@/components/MainPanel';
+import Title from '@/components/Title';
+import Button from '@/components/ui/Button';
 export default {
   components: {
     Card,
+    MainPanel,
+    Title,
+    Button,
   },
   data() {
     return {
@@ -21,7 +41,7 @@ export default {
         {
           id: '1',
           url: 'https://d.radikal.ru/d14/2006/78/c85556fd15a5.png',
-          title: 'Pet Boarding (No Cages)',
+          title: 'Pet Boarding',
           text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.'
         },
         {
@@ -61,5 +81,45 @@ export default {
 </script>
 
 <style scoped>
-
+.page {
+  background-color: #F5F5F5;
+  color: black;
+  position: relative;
+  z-index: 0;
+}
+.page::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url('../../assets/images/blob2.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.services {
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 112px;
+  z-index: 2;
+}
+.services__title {
+  margin-bottom: 78px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 24px;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 66px;
+}
+.services__button {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
 </style>

@@ -5,7 +5,6 @@
         Services 
         <img src="../assets/expand.png" class="menu__expand-button"> 
         <Dropdown 
-        @mouseover="showDropdown"
         class="dropdown"
         :theme="'desktop'"/>
       </li>

@@ -23,11 +23,13 @@ import OurPromise from '@/components/OurPromise';
 <style scoped>
 .who-we-are-main {
   background-color: #F5F5F5;
+  position: relative;
+  z-index: 1;
 }
 .dog-face-block {
   margin: 0 auto;
-  transform: translate(0, -80px);
-  padding-bottom: 230px;
+  transform: translate(0, -70px);
+  padding-bottom: 130px;
 }
 .our-promise-block {
   margin: 0 auto;

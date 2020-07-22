@@ -85,6 +85,7 @@ import Dropdown from '@/components/Dropdown';
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 9;
 }
 .mobile-menu__container {
   margin: 0;
